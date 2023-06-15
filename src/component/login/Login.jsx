@@ -1,9 +1,21 @@
 import React from 'react'
 import close from "../../asset/login/close.svg"
 import DataModal from '../data/DataModal';
-import DataList from '../data/DataList'; 
+import DataList from '../data/DataList';
+import { useDispatch } from 'react-redux'; 
+import { LoginOff } from '../../reducers/LoginOffReducer';
 
 export default function Login() {
+
+  
+  const dispatch = useDispatch()
+
+  const closeLogin = () => {
+
+    dispatch(LoginOff());
+  }
+
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -32,12 +44,10 @@ export default function Login() {
   };
 
 
-
-
   return (
     <div className='login'>
 
-        <img src={close} id='close' alt="close" />
+        <img onClick={closeLogin} src={close} id='close' alt="close" />
 
             <form onSubmit={handleSubmit}>
             <label for="link">Sosyal Medya Linki:</label>

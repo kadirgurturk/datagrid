@@ -1,14 +1,21 @@
 import React,{useState,useEffect} from 'react'
 import arrow from "../../asset/downcontainer/arrow.svg"
+import { useDispatch,useSelector } from 'react-redux'; 
+import { PageChange } from '../../reducers/PageNumberReducer';
 
-let totalpage = 234 / 6;
 
 export default function () {
   const [inputVal,setInpuVal] = useState("")
   const [currpage, setCurrPage] = useState(inputVal);
   const [rightArrow,setRightArrow] = useState(true);
   const [leftArrow,setLefttArrow] = useState(true);
-  const totalPage = 6;
+        
+  let row = useSelector(state => state.RowNumber.RowNumber)
+
+  let dispatch = useDispatch();
+
+
+
 
   const handleCurrPageChange = (event) => {
     const value = event.target.value;
@@ -20,6 +27,7 @@ export default function () {
       return;
     }
     setInpuVal(parsedValue);
+    dispatch(PageChange(parsedValue))
   };
 
   useEffect(() => {
@@ -35,6 +43,7 @@ export default function () {
     if(currpage > 1){
       let newPage = currpage - 1;
       setInpuVal(newPage)
+      dispatch(PageChange(newPage))
     }
   }
 
@@ -42,6 +51,7 @@ export default function () {
     if(currpage < totalPage){
       let newPage = currpage + 1;
       setInpuVal(newPage)
+      dispatch(PageChange(newPage))
     }
   }
 

@@ -14,6 +14,6 @@ const RowNumberReducer = createSlice({
     }
 })
 
-export const {LoginOff} = RowNumberReducer.actions;
+export const {RowChange} = RowNumberReducer.actions;
 
 export default RowNumberReducer.reducer;

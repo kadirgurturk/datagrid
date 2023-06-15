@@ -1,0 +1,10 @@
+@use "../../mixin" as m;
+@use "../../variable" as v;
+
+
+.upcontainer{
+    margin: 20px;
+    @include m.flex_row;
+    justify-content: space-between;
+    align-items: center;
+}

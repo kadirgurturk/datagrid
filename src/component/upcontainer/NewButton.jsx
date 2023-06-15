@@ -1,12 +1,24 @@
 import React from 'react'
 import plus from "../../asset/upcontainer/plus.svg"
-
+import LoginPopup from '../popup/LoginPopup';
+import { useDispatch,useSelector } from 'react-redux'; 
+import { LoginOff } from '../../reducers/LoginOffReducer';
 
 export default function NewButton() {
+  const loginOff = useSelector(state => state.LoginOff.loginOff)
+
+  const openLogin = () => {
+
+    dispatch(LoginOff());
+  }
+
   return (
-    <button className='newButton'>
+    <>
+      <button onClick={openLogin} className='newButton'>
         <img src={plus}/>
         <span>Yeni Hesap Ekle</span>
-    </button>
+      </button>
+      {loginOff && <LoginPopup/> }
+    </>
   )
 }

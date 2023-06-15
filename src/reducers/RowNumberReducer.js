@@ -8,7 +8,7 @@ const RowNumberReducer = createSlice({
     },
     reducers:{
         RowChange: (state,actions) =>{
-            state.loginOff = actions.payload;
+            state.RowNumber = actions.payload;
         },
         
     }

@@ -2,20 +2,23 @@ import React,{useState,useEffect} from 'react'
 import arrow from "../../asset/downcontainer/arrow.svg"
 import { useDispatch,useSelector } from 'react-redux'; 
 import { PageChange } from '../../reducers/PageNumberReducer';
-
+import DataList from '../data/DataList';
 
 export default function () {
   const [inputVal,setInpuVal] = useState("")
   const [currpage, setCurrPage] = useState(inputVal);
   const [rightArrow,setRightArrow] = useState(true);
   const [leftArrow,setLefttArrow] = useState(true);
-  let totalPage = 8;
+  const [totalPage, setTotalPage] = useState(8);
+  
   let row = useSelector(state => state.RowNumber.RowNumber)
+
+  
 
   let dispatch = useDispatch();
 
 
-
+  console.log(row);
 
   const handleCurrPageChange = (event) => {
     const value = event.target.value;
@@ -29,6 +32,18 @@ export default function () {
     setInpuVal(parsedValue);
     dispatch(PageChange(parsedValue))
   };
+
+  useEffect(() =>{
+    let info = (DataList.length % row === 0);
+    let newTotalPage = Math.floor(DataList.length / row)
+    if(info){
+      newTotalPage = Math.floor(DataList.length / row)
+    }else{
+      newTotalPage = Math.floor(DataList.length / row) + 1;
+    }
+    
+    setTotalPage(newTotalPage)
+  },[row,DataList])
 
   useEffect(() => {
     setInpuVal(1);
@@ -77,7 +92,7 @@ export default function () {
         <img onClick={leftClick} className={leftArrow ? "left" : "disableLeft"} src={arrow} alt="" />
         <input id='currpage'  type="number" value={inputVal}  onChange={handleCurrPageChange} />
         <span id='text'>of</span>
-        <span id='totalpage'>6</span>
+        <span id='totalpage'>{totalPage}</span>
         <img onClick={rightClick} className={rightArrow ? "right" : "disableRight"} src={arrow} alt="" />
     </div>
   )

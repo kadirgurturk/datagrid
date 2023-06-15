@@ -1,13 +1,45 @@
 import React from 'react'
 import close from "../../asset/login/close.svg"
+import DataModal from '../data/DataModal';
+import DataList from '../data/DataList'; 
 
 export default function Login() {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const link = document.getElementById('link').value;
+    const socialMedia = document.getElementById('socialMedia').value;
+    const description = document.getElementById('description').value;
+
+    let modal = new DataModal(
+      link,
+      socialMedia,
+      description
+    )
+
+    
+    modal = {
+      link: modal.link,
+      socialMedia: modal.socialMedia,
+      description: modal.description
+    };
+
+    DataList.push(modal);
+
+    console.log(DataList);
+
+    
+  };
+
+
+
+
   return (
     <div className='login'>
 
         <img src={close} id='close' alt="close" />
 
-            <form action="">
+            <form onSubmit={handleSubmit}>
             <label for="link">Sosyal Medya Linki:</label>
             <input className='form_input' type="text" id="link" name="link" pattern="www\..{3,}" required/>
   

@@ -1,0 +1,328 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+.login {
+  position: relative;
+  width: 488px;
+  height: 406px;
+  box-shadow: 0px 0px 3px 0px rgb(179, 179, 179);
+  background-color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 20px;
+  border-radius: 13px;
+}
+.login #close {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 23px;
+  right: 25px;
+}
+.login form {
+  padding: 35px 34px 115px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.login form label {
+  margin: 18px 0 5px 10px;
+}
+.login form .form_input {
+  width: 424px;
+  height: 40px;
+  border: 1px solid #D9D9D9;
+  border-radius: 38px;
+  outline: none;
+  padding-left: 15px;
+}
+.login form .form_input:focus {
+  outline-color: #744BFC;
+  border-color: #744BFC;
+}
+.login .form_btn {
+  width: 82.76px;
+  height: 37.02px;
+  border-radius: 34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login #submit-btn {
+  position: absolute;
+  bottom: 35px;
+  right: 35px;
+  background-color: #744BFC;
+  color: white;
+  opacity: 0.8;
+}
+.login #submit-btn:hover {
+  opacity: 1;
+}
+.login #reset-btn {
+  position: absolute;
+  bottom: 35px;
+  right: 134.24px;
+  background-color: #D9D9D9;
+  color: #744BFC;
+}
+.login #reset-btn:hover {
+  background-color: #d1d2d9;
+  border: none;
+  outline: none;
+}
+
+.loginpopup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  width: 100vw;
+  height: 100px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.header #logo {
+  position: absolute;
+  left: 104px;
+  top: 33px;
+  height: 36.7;
+  width: 124px;
+}
+.header .site_links {
+  text-decoration: none;
+  list-style-type: none;
+}
+.header .site_links ul {
+  width: 539px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+.header .site_links ul a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  opacity: 0.7;
+}
+.header .site_links ul a:hover {
+  opacity: 1;
+}
+.header .social_links {
+  height: 18px;
+  width: 114px;
+  position: absolute;
+  right: 111px;
+  top: 49px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0.7;
+  cursor: pointer;
+}
+.header .social_links:hover {
+  opacity: 1;
+}
+
+.newButton {
+  width: 175px;
+  height: 42px;
+  background: #744BFC;
+  border-radius: 39px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  color: white;
+  opacity: 0.85;
+  cursor: pointer;
+}
+.newButton:hover {
+  opacity: 1;
+}
+.newButton img {
+  margin-right: 10px;
+  width: 19px;
+  height: 19px;
+}
+.newButton span {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 21px;
+}
+
+.filter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 440px;
+  height: 42px;
+}
+.filter .searchInput {
+  position: relative;
+  width: 380px;
+}
+.filter .searchInput input {
+  border-radius: 39px;
+  padding-left: 15px;
+  width: 100%;
+  height: 42px;
+  border: 1px solid #D9D9D9;
+  outline: none;
+}
+.filter .searchInput input:focus {
+  outline-color: #744BFC;
+  border-color: #744BFC;
+}
+.filter .searchInput .search {
+  background-color: #744BFC;
+  border-radius: 0 39px 39px 0;
+  width: 45px;
+  height: 42px;
+  top: 0;
+  right: 0;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.85;
+}
+.filter .searchInput .search:hover {
+  opacity: 1;
+}
+.filter .filterchoice {
+  height: 42px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.filter .filterchoice:hover {
+  border: 0.5px solid #744BFC;
+}
+
+.rowclass {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  width: 143px;
+  height: 37px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.rowclass .text {
+  color: #744BFC;
+}
+.rowclass .rows {
+  height: 37px;
+  width: 90px;
+  border: 0.8px solid #d9cdfe;
+  border-radius: 39px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.rowclass .rows .row {
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.rowclass .rows .row .upBtn {
+  cursor: pointer;
+  opacity: 0.75;
+}
+.rowclass .rows .row .upBtn:hover {
+  opacity: 1;
+}
+.rowclass .rows .row .downBtn {
+  cursor: pointer;
+  opacity: 0.75;
+}
+.rowclass .rows .row .downBtn:hover {
+  opacity: 1;
+}
+.rowclass .rows .row .upactive {
+  opacity: 0.4;
+}
+.rowclass .rows .row .downactive {
+  opacity: 0.4;
+}
+
+.pagaeble {
+  width: 103px;
+  height: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.pagaeble input::-webkit-outer-spin-button,
+.pagaeble input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.pagaeble .left {
+  transform: rotate(180deg);
+  opacity: 0.75;
+  cursor: pointer;
+}
+.pagaeble .left:hover {
+  opacity: 1;
+}
+.pagaeble #currpage {
+  width: 21px;
+  height: 25px;
+  border: 0.5px solid #EAEAEA;
+  border-radius: 4px;
+  text-align: center;
+}
+.pagaeble #currpage:focus {
+  outline-color: #744BFC;
+  border-color: #744BFC;
+}
+.pagaeble #text {
+  color: #C9C9C9;
+}
+.pagaeble #totalpage {
+  color: #744BFC;
+}
+.pagaeble .right {
+  opacity: 0.75;
+  cursor: pointer;
+}
+.pagaeble .right:hover {
+  opacity: 1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}/*# sourceMappingURL=app.css.map */

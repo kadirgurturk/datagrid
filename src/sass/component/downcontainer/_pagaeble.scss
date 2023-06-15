@@ -1,0 +1,54 @@
+@use "../../mixin" as m;
+@use "../../variable" as v;
+
+
+.pagaeble{
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+    width: 103px;
+    height: 25px;
+    @include m.flex_row;
+    justify-content:space-between;
+    align-items: center;
+
+    .left{
+        transform: rotate(180deg);
+        opacity: .75;
+        cursor: pointer;
+        &:hover{
+            opacity: 1;
+        }
+    }
+
+    #currpage{
+        width: 21px;
+        height: 25px;
+        border: .5px solid #EAEAEA;
+        border-radius: 4px;
+        text-align: center;
+
+        &:focus{
+            outline-color: v.$primary-color;
+            border-color: v.$primary-color;
+        }
+        
+    }
+    #text{
+        color: #C9C9C9;
+    }
+    #totalpage{
+        color: v.$primary-color;
+    }
+    .right{
+        opacity: .75;
+        cursor: pointer;
+        &:hover{
+            opacity: 1;
+        }
+
+    }
+}

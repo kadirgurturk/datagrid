@@ -1,0 +1,56 @@
+@use "../../mixin" as m;
+@use "../../variable" as v;
+
+
+.rowclass{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    width: 143px;
+    height: 37px;
+    @include m.flex_row;
+    justify-content:space-between;
+    align-items: center;
+    .text{
+        color: v.$primary-color;
+    }
+    .rows{
+        height: 37px;
+        width: 90px;
+        border: .8px solid lighten($color: v.$primary-color, $amount:26);
+        border-radius: 39px;
+        @include m.flex_row;
+        justify-content: space-around;
+        align-items: center;
+        .row{
+            height: 20px;
+            @include m.flex_column;
+            justify-content: space-between;
+            align-items: center;
+            .upBtn{
+                cursor: pointer;
+                opacity: .75;
+                &:hover{
+                    opacity: 1;
+                }
+            }
+
+            .downBtn{
+                cursor: pointer;
+                opacity: .75;
+                &:hover{
+                    opacity: 1;
+                }
+            }
+
+            .upactive{
+                opacity: 0.4;
+                
+            }
+            .downactive{
+                opacity: 0.4;
+                
+            }
+        }
+    }
+}

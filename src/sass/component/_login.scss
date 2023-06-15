@@ -1,0 +1,82 @@
+@use "../mixin" as m;
+@use "../variable" as v;
+
+
+
+.login{
+    position: relative;
+    width: 488px;
+    height: 406px;
+    box-shadow: 0px 0px 3px 0px rgba(179,179,179,1);
+    background-color: white;
+    font-family: v.$primary-font;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 20px;
+    border-radius: 13px;;
+
+    #close{
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        top: 23px;
+        right: 25px;
+
+    }
+
+    form{
+        padding: 35px 34px 115px 30px;
+        @include m.flex_column;
+        justify-content: space-between;
+
+        label{
+            margin:18px 0 5px 10px;
+        }
+
+        .form_input{
+            width: 424px;
+            height: 40px;
+            border: 1px solid v.$button-border-color;
+            border-radius: 38px;
+            outline: none;
+            padding-left: 15px;
+            &:focus{
+                outline-color: v.$primary-color;
+                border-color: v.$primary-color;
+            }
+        }
+
+    }
+    
+
+    .form_btn{
+        width: 82.76px;
+        height: 37.02px;
+        border-radius: 34px;
+        @include m.center;
+    }
+    #submit-btn{ 
+        position: absolute;
+        bottom: 35px;
+        right: 35px;
+        background-color: v.$primary-color;
+        color: white;
+        opacity: 0.8;
+        &:hover{
+            opacity: 1;
+        }
+    }
+    #reset-btn{ 
+        position: absolute;
+        bottom: 35px;
+        right: 134.24px;
+        background-color: v.$button-border-color;
+        color: v.$primary-color;
+        &:hover{
+            background-color: #d1d2d9;
+            border: none;
+            outline: none;
+        }
+    }
+}
+

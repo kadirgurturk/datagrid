@@ -1,0 +1,54 @@
+@use "../mixin" as m;
+@use "../variable" as v;
+
+.header{
+    width: 100vw;
+    height: 100px;
+    position: relative;
+    @include m.center;
+    #logo{
+        position: absolute;
+        left: 104px;
+        top: 33px;
+        height: 36.7;
+        width:124px ;
+    }
+
+    .site_links{
+        text-decoration: none;
+        list-style-type: none;
+        ul{
+            width: 539px;
+            @include m.flex_row;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;          
+            a{
+                text-decoration: none;
+                color: black;
+                cursor: pointer;
+                opacity: .7;
+                &:hover{
+                    opacity: 1;
+                }
+            }
+        }       
+    }
+
+    .social_links{
+        height: 18px;
+        width: 114px;
+        position: absolute;
+        right: 111px;
+        top:49px;
+        @include m.flex_row;
+        justify-content: space-between;
+        align-items: center;
+        opacity: .7;
+        cursor: pointer;
+        &:hover{
+            opacity: 1;
+        }
+
+    }
+}

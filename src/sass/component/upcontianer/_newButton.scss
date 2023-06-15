@@ -1,0 +1,30 @@
+@use "../../mixin" as m;
+@use "../../variable" as v;
+
+
+.newButton{
+    width: 175px;
+    height: 42px;
+    background: v.$primary-color;
+    border-radius: 39px;
+    @include m.flex_row;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    color: white;
+    opacity: .85;
+    cursor: pointer;
+    &:hover{
+        opacity: 1;
+    }
+    img{
+        margin-right: 10px;
+        width: 19px;
+        height: 19px;
+    }
+    span{
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 21px;
+    }
+}

@@ -1,0 +1,17 @@
+@use "./component/login";
+@use "./popup/loginPopup";
+@use "./header/header";
+@use "./component/upcontianer/newButton";
+@use "./component/upcontianer/filter";
+@use "./component/downcontainer/row";
+@use "./component/downcontainer/pagaeble";
+@use "./mixin" as m;
+@use "./variable" as v;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: v.$primary-font;
+}

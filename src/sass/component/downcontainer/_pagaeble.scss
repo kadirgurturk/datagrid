@@ -24,6 +24,12 @@
         }
     }
 
+    .disableLeft{
+        transform: rotate(180deg);
+        opacity: 0.15;
+       
+    }
+
     #currpage{
         width: 21px;
         height: 25px;
@@ -50,5 +56,10 @@
             opacity: 1;
         }
 
+    }
+
+    .disableRight{
+        opacity: 0.15;
+       
     }
 }

@@ -295,6 +295,10 @@
 .pagaeble .left:hover {
   opacity: 1;
 }
+.pagaeble .disableLeft {
+  transform: rotate(180deg);
+  opacity: 0.15;
+}
 .pagaeble #currpage {
   width: 21px;
   height: 25px;
@@ -318,6 +322,9 @@
 }
 .pagaeble .right:hover {
   opacity: 1;
+}
+.pagaeble .disableRight {
+  opacity: 0.15;
 }
 
 * {

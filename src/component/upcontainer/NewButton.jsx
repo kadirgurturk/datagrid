@@ -5,7 +5,7 @@ import { useDispatch,useSelector } from 'react-redux';
 import { LoginOff } from '../../reducers/LoginOffReducer';
 
 export default function NewButton() {
-  const loginOff = useSelector(state => state.LoginOff.loginOff)
+  const loginOff = useSelector(state => state.loginOff.loginOff)
 
   const openLogin = () => {
 

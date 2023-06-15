@@ -9,7 +9,7 @@ export default function () {
   const [currpage, setCurrPage] = useState(inputVal);
   const [rightArrow,setRightArrow] = useState(true);
   const [leftArrow,setLefttArrow] = useState(true);
-        
+  let totalPage = 8;
   let row = useSelector(state => state.RowNumber.RowNumber)
 
   let dispatch = useDispatch();

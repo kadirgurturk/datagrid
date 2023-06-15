@@ -3,7 +3,7 @@
 
 
 .downcontainer{
-    margin: 20px;
+    margin: 20px 5px 0 5px;
     @include m.flex_row;
     justify-content: space-between;
     align-items: center;

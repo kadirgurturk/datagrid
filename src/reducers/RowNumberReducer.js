@@ -1,19 +1,19 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-
 const RowNumberReducer = createSlice({
-    name:"RowNumber",
-    initialState:{
-        RowNumber: 6
+  name: "RowNumber",
+  initialState: {
+    RowNumber: 6
+  },
+  reducers: {
+    RowChange: (state, actions) => {
+      state.RowNumber = actions.payload;
     },
-    reducers:{
-        RowChange: (state,actions) =>{
-            state.RowNumber = actions.payload;
-        },
-        
-    }
+  }
 })
 
-export const {RowChange} = RowNumberReducer.actions;
+console.log;
+
+export const { RowChange } = RowNumberReducer.actions;
 
 export default RowNumberReducer.reducer;

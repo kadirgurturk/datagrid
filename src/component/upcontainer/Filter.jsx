@@ -17,7 +17,7 @@ export default function Filter() {
 
   let dispatch = useDispatch();
 
-  console.log(searchInput);
+  
 
   const handleSearchClick = () => {
     console.log(searchInput);

@@ -1,0 +1,59 @@
+@use "../mixin" as m;
+@use "../variable" as v;
+
+
+.filterOptions{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.8);
+    @include m.center;
+
+    .filterPopup{
+        position: relative;
+        width: 250px;
+        height: 190px;
+        box-shadow: 0px 0px 3px 0px rgba(179,179,179,1);
+        background-color: white;
+        font-family: v.$primary-font;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 20px;
+        border-radius: 13px;;
+    
+        img{
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            top: 15px;
+            right: 25px;
+            &:hover{
+                
+                opacity: .5;
+            }
+    
+        }
+    
+        .choices{
+            height: 140px;
+            padding: 70px 34px 0 30px;
+            @include m.flex_column;
+            justify-content: space-between;
+    
+            div{
+
+                &:hover{
+                    opacity: .6;
+                    cursor: pointer;
+                }
+            }
+    
+        }
+        
+    
+      
+    }
+    
+}

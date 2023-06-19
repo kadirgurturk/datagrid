@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import DataList from '../data/DataList'
 import DataGrid, { Scrolling, Pager, Paging, Column, Editing  } from 'devextreme-react/data-grid';
 import { useDispatch,useSelector } from 'react-redux'; 
@@ -7,15 +7,21 @@ import { PageChange } from '../../reducers/PageNumberReducer';
 export default function Grid() {
   let row = useSelector(state => state.RowNumber.RowNumber)
   let page = useSelector(state => state.PageNumber.PageNumber)
+  const [data,setData] = useState(DataList);
+
+  useEffect(()=>{
+    setData(DataList)
+  },[DataList])
 
 
   return (
     <div className='grid'>
 
       <DataGrid
-       id='gridContainer'
+        
+        height={280}
         allowColumnReordering={true}
-        dataSource={DataList}
+        dataSource={data}
         showBorders={false}
         focusedRowEnabled={false}
         defaultFocusedRowIndex={0}
@@ -25,7 +31,7 @@ export default function Grid() {
         keyExpr="link"
         paging={{
           enabled: true,
-          pageIndex: page - 1, // Sayfa numarası 0 tabanlı olduğu için 1 çıkarıyoruz
+          pageIndex: page - 1, 
           pageSize: row,
         }}
       >
@@ -38,7 +44,7 @@ export default function Grid() {
           showNavigationButtons={false}
         />
 
-        <Column dataField='link' caption='Link' />
+        <Column dataField='link' caption='Link'  />
         <Column dataField='socialMedia' caption='Sosyal Medya' />
         <Column dataField='description' caption='Açıklama' />
 

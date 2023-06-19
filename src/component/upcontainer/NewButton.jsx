@@ -7,10 +7,14 @@ import { LoginOff } from '../../reducers/LoginOffReducer';
 export default function NewButton() {
   const loginOff = useSelector(state => state.loginOff.loginOff)
 
+  let dispatch = useDispatch()
+
   const openLogin = () => {
 
     dispatch(LoginOff());
   }
+
+  console.log(loginOff);
 
   return (
     <>

@@ -18,8 +18,6 @@ export default function () {
   let dispatch = useDispatch();
 
 
-  console.log(row);
-
   const handleCurrPageChange = (event) => {
     const value = event.target.value;
     const parsedValue = parseInt(value, 10);

@@ -51,7 +51,7 @@ export default function Pagable() {
 
   }, [row]);
 
-  console.log(row);
+
 
   return (
     <div className='rowclass'>

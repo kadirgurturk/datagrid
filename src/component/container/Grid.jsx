@@ -22,8 +22,10 @@ export default function Grid() {
     setData(DataList)
   }, [])
 
+
+
   const columnsMemo = useMemo(() => COLUMNS, [])
-  const dataMemo = useMemo(() => DataList, [])
+  const dataMemo = useMemo(() => data, [])
 
   const tableInstance = useTable({
     columns: columnsMemo,
@@ -42,37 +44,33 @@ export default function Grid() {
     getTableBodyProps,
     headerGroups,
     page,
-    rows,
+    nextPage,
+    previousPage,
+    pageOptions,
+    gotoPage,
+    pageCount,
     prepareRow ,
     state,
     setGlobalFilter,
     setPageSize,
   } = tableInstance
 
-  const { globalFilter, pageSize } = state;
+  const { globalFilter, pageSize, pageIndex } = state;
 
   useEffect(() => {
     setGlobalFilter(textFilter);
   }, [textFilter]);
 
   useEffect(() => {
-    dispatch(TextChange(globalFilter));
-  }, [dispatch, globalFilter]);
+    gotoPage(pageReducer - 1);
+  }, [pageReducer]);
+
 
   useEffect(() => {
     setPageSize(rowReducer);
   }, [rowReducer]);
 
-  useEffect(() => {
-    dispatch(RowChange(pageSize));
-  }, [dispatch, pageSize]);
 
-  useEffect(() => {
-    // row değeri değiştiğinde pageSize değerini güncelle
-    setPageSize(rowReducer);
-  }, [rowReducer]);
-
-  console.log(pageSize);
 
   return (
     <div className='grid'>

@@ -4,7 +4,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const PageNumberReducer = createSlice({
     name:"PageNumber",
     initialState:{
-        PageNumber: 1
+        PageNumber: 0
     },
     reducers:{
         PageChange: (state,actions) =>{

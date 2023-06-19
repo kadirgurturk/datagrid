@@ -17,6 +17,23 @@ export default function () {
 
   let dispatch = useDispatch();
 
+  const leftClick = () =>{
+    if(currpage > 1){
+      let newPage = currpage - 1;
+      setInpuVal(newPage)
+      dispatch(PageChange(newPage))
+    }
+  }
+  
+  const rightClick = () =>{
+    if(currpage < totalPage){
+      let newPage = currpage + 1;
+      setInpuVal(newPage)
+      dispatch(PageChange(newPage))
+    }
+  }
+  
+
 
   const handleCurrPageChange = (event) => {
     const value = event.target.value;
@@ -33,7 +50,8 @@ export default function () {
 
   useEffect(() =>{
     let info = (DataList.length % row === 0);
-    let newTotalPage = Math.floor(DataList.length / row)
+    
+    let newTotalPage = 0;
     if(info){
       newTotalPage = Math.floor(DataList.length / row)
     }else{
@@ -52,21 +70,7 @@ export default function () {
   }, [inputVal]);
 
   
-  const leftClick = () =>{
-    if(currpage > 1){
-      let newPage = currpage - 1;
-      setInpuVal(newPage)
-      dispatch(PageChange(newPage))
-    }
-  }
 
-  const rightClick = () =>{
-    if(currpage < totalPage){
-      let newPage = currpage + 1;
-      setInpuVal(newPage)
-      dispatch(PageChange(newPage))
-    }
-  }
 
   useEffect(() => {
     if(inputVal === totalPage){
@@ -83,6 +87,8 @@ export default function () {
     }
 
 }, [currpage,inputVal]);
+
+
 
 
   return (

@@ -11,6 +11,8 @@ const HIGHER_ROW = 8;
 
 export default function Pagable() {
 
+    
+
     const [row,setRow] = useState(6);
     const [upBtn, setUpBtn] = useState(false);
     const [downBtn, setDownBtn] = useState(false);

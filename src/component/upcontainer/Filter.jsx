@@ -1,14 +1,23 @@
 import React,{useState} from 'react'
+import { useDispatch,useSelector } from 'react-redux'; 
+import {TextChange} from "../../reducers/TextReducer"
 import search from "../../asset/upcontainer/search.svg"
 import filter from "../../asset/upcontainer/filter.svg"
 import FilterChoice from './FilterChoice';
+import { useAsyncDebounce } from 'react-table'
+
 
 export default function Filter() {
+
+  const globalFilter = useSelector(state => state.TextFilter.text)
+
   const [isOpenFilter, setIsOpenFilter] = useState(false)
   const [filterOption, setFilterOption] = useState("none");
   const [searchInput, setSearchInput] = useState("");
 
-  console.log(isOpenFilter);
+  let dispatch = useDispatch();
+
+  console.log(searchInput);
 
   const handleSearchClick = () => {
     console.log(searchInput);
@@ -19,13 +28,17 @@ export default function Filter() {
 
   }
 
+
   return (
     <div className='filter'>
       <div className='searchInput'>
         <input
-          value={searchInput}
-          onChange={(e) => setSearchInput(e.target.value)}
-          disabled={filterOption === "none"}
+          
+          onChange={(e) => {
+            setSearchInput(e.target.value)
+            dispatch(TextChange(e.target.value));
+          }}
+          //disabled={filterOption === "none"}
         />
         <div className="search" onClick={handleSearchClick}>
           <img src={search} alt="Search" />

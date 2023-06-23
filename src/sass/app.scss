@@ -26,5 +26,10 @@
 .app{
     width: 98vw;
     padding: 0px 29px 0 27px;
+
+    @include r.big-tel{
+        padding:0;
+        width: 100vw;
+      } 
     
 }

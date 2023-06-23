@@ -11,18 +11,74 @@
   line-height: 20px;
   border-radius: 13px;
 }
+@media all and (max-width: 600px) {
+  .login {
+    width: 425px;
+    height: 385px;
+  }
+}
+@media all and (max-width: 600px) {
+  .login {
+    width: 300px;
+    height: 315px;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 16px;
+  }
+}
+@media all and (max-width: 600px) {
+  .login {
+    width: 300px;
+    height: 315px;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 16px;
+  }
+}
+@media all and (max-width: 340px) {
+  .login {
+    width: 260px;
+    height: 290px;
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 14px;
+  }
+}
 .login #close {
   position: absolute;
   width: 24px;
   height: 24px;
   top: 23px;
   right: 25px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+.login #close:hover {
+  opacity: 1;
+}
+@media all and (max-width: 600px) {
+  .login #close {
+    width: 19px;
+    height: 19px;
+    top: 20px;
+    right: 21px;
+  }
 }
 .login form {
   padding: 35px 34px 115px 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+@media all and (max-width: 600px) {
+  .login form {
+    padding: 20px 20px 70px 15px;
+  }
+}
+@media all and (max-width: 340px) {
+  .login form {
+    padding: 15px 15px 50px 10px;
+  }
 }
 .login form label {
   margin: 18px 0 5px 10px;
@@ -39,7 +95,30 @@
   outline-color: #744BFC;
   border-color: #744BFC;
 }
+@media all and (max-width: 600px) {
+  .login form .form_input {
+    width: 365px;
+  }
+}
+@media all and (max-width: 600px) {
+  .login form .form_input {
+    font-size: 11px;
+    padding-left: 10px;
+    width: 270px;
+    height: 30px;
+  }
+}
+@media all and (max-width: 340px) {
+  .login form .form_input {
+    font-size: 9px;
+    padding-left: 10px;
+    width: 235px;
+    height: 30px;
+  }
+}
 .login .form_btn {
+  outline: none;
+  border: none;
   width: 82.76px;
   height: 37.02px;
   border-radius: 34px;
@@ -48,6 +127,19 @@
   justify-content: center;
   align-items: center;
 }
+@media all and (max-width: 600px) {
+  .login .form_btn {
+    width: 70px;
+    height: 30px;
+  }
+}
+@media all and (max-width: 340px) {
+  .login .form_btn {
+    width: 55px;
+    height: 25px;
+    border-radius: 28px;
+  }
+}
 .login #submit-btn {
   position: absolute;
   bottom: 35px;
@@ -55,9 +147,17 @@
   background-color: #744BFC;
   color: white;
   opacity: 0.8;
+  outline: none;
+  border: none;
 }
 .login #submit-btn:hover {
+  cursor: pointer;
   opacity: 1;
+}
+@media all and (max-width: 340px) {
+  .login #submit-btn {
+    font-size: 10px;
+  }
 }
 .login #reset-btn {
   position: absolute;
@@ -65,11 +165,22 @@
   right: 134.24px;
   background-color: #D9D9D9;
   color: #744BFC;
+  opacity: 0.8;
+  outline: none;
+  border: none;
 }
 .login #reset-btn:hover {
+  cursor: pointer;
+  opacity: 1;
   background-color: #d1d2d9;
   border: none;
   outline: none;
+}
+@media all and (max-width: 340px) {
+  .login #reset-btn {
+    right: 102px;
+    font-size: 10px;
+  }
 }
 
 .loginpopup {
@@ -278,6 +389,12 @@
     height: 28px;
   }
 }
+@media all and (max-width: 340px) {
+  .newButton {
+    width: 75px;
+    height: 18px;
+  }
+}
 .newButton:hover {
   opacity: 1;
 }
@@ -291,6 +408,12 @@
     margin-right: 7px;
     width: 12px;
     height: 12px;
+  }
+}
+@media all and (max-width: 340px) {
+  .newButton img {
+    width: 10px;
+    height: 10px;
   }
 }
 .newButton span {
@@ -309,6 +432,13 @@
   .newButton span {
     font-size: 8px;
     line-height: 15px;
+    font-weight: 300;
+  }
+}
+@media all and (max-width: 340px) {
+  .newButton span {
+    font-size: 6px;
+    line-height: 12px;
     font-weight: 300;
   }
 }
@@ -333,6 +463,13 @@
     height: 21px;
   }
 }
+@media all and (max-width: 340px) {
+  .filter {
+    align-items: center;
+    width: 155px;
+    height: 18px;
+  }
+}
 .filter .searchInput {
   position: relative;
   width: 380px;
@@ -347,6 +484,12 @@
   .filter .searchInput {
     width: 150px;
     height: 21px;
+  }
+}
+@media all and (max-width: 340px) {
+  .filter .searchInput {
+    width: 120px;
+    height: 18px;
   }
 }
 .filter .searchInput input {
@@ -368,6 +511,12 @@
   .filter .searchInput input {
     width: 150px;
     height: 21px;
+  }
+}
+@media all and (max-width: 340px) {
+  .filter .searchInput input {
+    width: 120px;
+    height: 18px;
   }
 }
 .filter .searchInput input:focus {
@@ -404,6 +553,16 @@
     width: 10px;
   }
 }
+@media all and (max-width: 340px) {
+  .filter .searchInput .search {
+    top: 4.5px;
+    width: 15px;
+    height: 17px;
+  }
+  .filter .searchInput .search img {
+    width: 8px;
+  }
+}
 .filter .searchInput .search:hover {
   opacity: 1;
 }
@@ -423,6 +582,12 @@
     height: 28px;
   }
 }
+@media all and (max-width: 340px) {
+  .filter .filterchoice {
+    width: 25px;
+    height: 18px;
+  }
+}
 .filter .filterchoice:hover {
   border: 0.5px solid #744BFC;
 }
@@ -433,6 +598,15 @@
   }
   .filter .filterchoice img {
     width: 10px;
+  }
+}
+@media all and (max-width: 340px) {
+  .filter .filterchoice {
+    width: 25px;
+    height: 21px;
+  }
+  .filter .filterchoice img {
+    width: 8px;
   }
 }
 
@@ -623,6 +797,11 @@
   justify-content: space-between;
   align-items: center;
 }
+@media all and (max-width: 340px) {
+  .downcontainer {
+    margin: 25px 10px;
+  }
+}
 
 .container {
   width: 100%;
@@ -651,6 +830,11 @@
 @media all and (max-width: 480px) {
   .container {
     padding: 10px 28px 10px 15px;
+  }
+}
+@media all and (max-width: 340px) {
+  .container {
+    padding: 10px 0;
   }
 }
 

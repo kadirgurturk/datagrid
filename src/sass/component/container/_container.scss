@@ -26,6 +26,8 @@
       @include r.mid-tel{
         padding: 10px 28px 10px 15px;
       } 
-    
+      @include r.mini-tel{
+        padding: 10px 0;
+      } 
     
 }

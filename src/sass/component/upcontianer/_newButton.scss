@@ -22,6 +22,10 @@
         width: 100px;    
         height: 28px;
       }  
+      @include r.mini-tel{
+        width: 75px;    
+        height: 18px;
+      }
     &:hover{
         opacity: 1;
     }
@@ -33,7 +37,11 @@
             margin-right: 7px;
             width: 12px;    
             height: 12px;
-          } 
+          }
+          @include r.mini-tel{
+            width: 10px;    
+            height: 10px;
+          }
     }
     span{
         font-weight: 500;
@@ -49,5 +57,10 @@
             line-height: 15px;
             font-weight: 300;
           } 
+          @include r.mini-tel{
+            font-size: 6px;
+            line-height: 12px;
+            font-weight: 300;
+          }
     }
 }

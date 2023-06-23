@@ -40,3 +40,9 @@
         @content
     }
 }
+
+@mixin mini-tel {
+    @media all and (max-width:340px) {
+        @content
+    }
+}

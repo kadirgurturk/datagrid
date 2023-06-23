@@ -16,6 +16,13 @@
         width: 200px;
         height: 21px;
       }
+      @include r.mini-tel{
+        align-items: center;
+        width: 155px;
+        height: 18px;
+      }
+
+      
     .searchInput{
         position: relative;
         width: 380px;
@@ -26,6 +33,10 @@
           @include r.big-tel{
             width: 150px;
             height: 21px;
+          }
+          @include r.mini-tel{
+            width: 120px;
+            height: 18px;
           }
         input{
             border-radius: 39px;
@@ -42,6 +53,10 @@
             @include r.big-tel{
                 width: 150px;
                 height: 21px;
+              }
+              @include r.mini-tel{
+                width: 120px;
+                height: 18px;
               }
             &:focus{
                 outline-color: v.$primary-color;
@@ -70,6 +85,14 @@
                 width: 18px;    
                 height: 21px;
               }
+              @include r.mini-tel{
+                img{
+                  width: 8px;
+              }
+              top:4.5px;
+              width: 15px;    
+              height: 17px;
+              }
             &:hover{
                 opacity: 1;
             }
@@ -85,6 +108,10 @@
             width: 34px;    
             height: 28px;
           }
+          @include r.mini-tel{
+            width: 25px;    
+            height: 18px;
+          }
         &:hover{
             border: .5px solid v.$primary-color;
         }
@@ -92,10 +119,17 @@
             img{
                 width: 10px;
             }
-           
             width: 34px;    
             height: 28px;
           }
+          @include r.mini-tel{
+            img{
+              width: 8px;
+          }
+          width: 25px;  
+          height: 21px;
+          }
+          
     }
 
 }

@@ -85,8 +85,54 @@
   align-items: center;
 }
 
-.header {
+.filterOptions {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.filterOptions .filterPopup {
+  position: relative;
+  width: 250px;
+  height: 190px;
+  box-shadow: 0px 0px 3px 0px rgb(179, 179, 179);
+  background-color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 20px;
+  border-radius: 13px;
+}
+.filterOptions .filterPopup img {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 15px;
+  right: 25px;
+}
+.filterOptions .filterPopup img:hover {
+  opacity: 0.5;
+}
+.filterOptions .filterPopup .choices {
+  height: 140px;
+  padding: 70px 34px 0 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.filterOptions .filterPopup .choices div:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.header {
+  width: 100%;
   height: 100px;
   position: relative;
   display: flex;
@@ -101,6 +147,22 @@
   height: 36.7;
   width: 124px;
 }
+@media all and (max-width: 1150px) {
+  .header #logo {
+    left: 50px;
+  }
+}
+@media all and (max-width: 1050px) {
+  .header #logo {
+    left: 10px;
+  }
+}
+@media all and (max-width: 883px) {
+  .header #logo {
+    height: 24px;
+    width: 78px;
+  }
+}
 .header .site_links {
   text-decoration: none;
   list-style-type: none;
@@ -113,13 +175,21 @@
   align-items: center;
   list-style: none;
 }
+@media all and (max-width: 883px) {
+  .header .site_links ul {
+    font-size: 12px;
+    width: 450px;
+  }
+}
 .header .site_links ul a {
   text-decoration: none;
   color: black;
+}
+.header .site_links ul a span {
   cursor: pointer;
   opacity: 0.7;
 }
-.header .site_links ul a:hover {
+.header .site_links ul a span:hover {
   opacity: 1;
 }
 .header .social_links {
@@ -132,11 +202,36 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+@media all and (max-width: 883px) {
+  .header .social_links {
+    height: 15px;
+    width: 100px;
+  }
+}
+@media all and (max-width: 1150px) {
+  .header .social_links {
+    right: 50px;
+  }
+}
+@media all and (max-width: 1050px) {
+  .header .social_links {
+    right: 10px;
+  }
+}
+.header .social_links img {
   opacity: 0.7;
   cursor: pointer;
 }
-.header .social_links:hover {
+@media all and (max-width: 883px) {
+  .header .social_links img {
+    height: 12px;
+    width: 12px;
+  }
+}
+.header .social_links img:hover {
   opacity: 1;
+  cursor: pointer;
 }
 
 .newButton {
@@ -220,6 +315,14 @@
 }
 .filter .filterchoice:hover {
   border: 0.5px solid #744BFC;
+}
+
+.upcontainer {
+  margin: 0 5px 10px 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .rowclass {
@@ -327,9 +430,80 @@
   opacity: 0.15;
 }
 
+.downcontainer {
+  margin: 25px 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  height: 865px;
+  background: linear-gradient(180deg, #EFF2FF -30.56%, rgba(232, 236, 255, 0) 135.85%);
+  border-radius: 6px;
+  padding: 44px 80px 20px 60px;
+}
+@media all and (max-width: 1050px) {
+  .container {
+    padding: 44px 80px 0 60px;
+    height: 980px;
+  }
+}
+
+.grid {
+  width: 100%;
+  height: 700px;
+  border: 1px solid #EAEAEA;
+  border-radius: 8px;
+}
+@media all and (max-width: 1050px) {
+  .grid {
+    margin-bottom: 120px;
+  }
+}
+@media all and (max-width: 883px) {
+  .grid {
+    margin-bottom: 180x;
+  }
+}
+.grid img {
+  margin-left: 20px;
+}
+.grid table {
+  font-family: "Poppins", sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  height: 100%;
+}
+.grid td, .grid th {
+  border: 1px solid #C4CEE5;
+  text-align: left;
+  padding: 18px;
+  width: 460px;
+}
+@media all and (max-width: 883px) {
+  .grid td, .grid th {
+    font-size: 12px;
+    padding: 12px;
+  }
+}
+.grid tr:nth-child(odd) {
+  background-color: white;
+}
+.grid tr:nth-child(even) {
+  background-color: #EFF2FF;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+}
+
+.app {
+  width: 98vw;
+  padding: 0px 29px 0 27px;
 }/*# sourceMappingURL=app.css.map */

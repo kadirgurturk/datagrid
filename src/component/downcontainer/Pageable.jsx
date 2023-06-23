@@ -1,14 +1,39 @@
 import React,{useState,useEffect} from 'react'
 import arrow from "../../asset/downcontainer/arrow.svg"
-
-let totalpage = 234 / 6;
+import { useDispatch,useSelector } from 'react-redux'; 
+import { PageChange } from '../../reducers/PageNumberReducer';
+import DataList from '../data/DataList';
 
 export default function () {
   const [inputVal,setInpuVal] = useState("")
   const [currpage, setCurrPage] = useState(inputVal);
   const [rightArrow,setRightArrow] = useState(true);
   const [leftArrow,setLefttArrow] = useState(true);
-  const totalPage = 6;
+  const [totalPage, setTotalPage] = useState(8);
+  
+  let row = useSelector(state => state.RowNumber.RowNumber)
+
+  
+
+  let dispatch = useDispatch();
+
+  const leftClick = () =>{
+    if(currpage > 1){
+      let newPage = currpage - 1;
+      setInpuVal(newPage)
+      dispatch(PageChange(newPage))
+    }
+  }
+  
+  const rightClick = () =>{
+    if(currpage < totalPage){
+      let newPage = currpage + 1;
+      setInpuVal(newPage)
+      dispatch(PageChange(newPage))
+    }
+  }
+  
+
 
   const handleCurrPageChange = (event) => {
     const value = event.target.value;
@@ -20,7 +45,21 @@ export default function () {
       return;
     }
     setInpuVal(parsedValue);
+    dispatch(PageChange(parsedValue))
   };
+
+  useEffect(() =>{
+    let info = (DataList.length % row === 0);
+    
+    let newTotalPage = 0;
+    if(info){
+      newTotalPage = Math.floor(DataList.length / row)
+    }else{
+      newTotalPage = Math.floor(DataList.length / row) + 1;
+    }
+    
+    setTotalPage(newTotalPage)
+  },[row,DataList])
 
   useEffect(() => {
     setInpuVal(1);
@@ -31,19 +70,7 @@ export default function () {
   }, [inputVal]);
 
   
-  const leftClick = () =>{
-    if(currpage > 1){
-      let newPage = currpage - 1;
-      setInpuVal(newPage)
-    }
-  }
 
-  const rightClick = () =>{
-    if(currpage < totalPage){
-      let newPage = currpage + 1;
-      setInpuVal(newPage)
-    }
-  }
 
   useEffect(() => {
     if(inputVal === totalPage){
@@ -62,12 +89,14 @@ export default function () {
 }, [currpage,inputVal]);
 
 
+
+
   return (
     <div className='pagaeble'>
         <img onClick={leftClick} className={leftArrow ? "left" : "disableLeft"} src={arrow} alt="" />
         <input id='currpage'  type="number" value={inputVal}  onChange={handleCurrPageChange} />
         <span id='text'>of</span>
-        <span id='totalpage'>6</span>
+        <span id='totalpage'>{totalPage}</span>
         <img onClick={rightClick} className={rightArrow ? "right" : "disableRight"} src={arrow} alt="" />
     </div>
   )

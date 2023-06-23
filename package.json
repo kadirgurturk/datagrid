@@ -10,8 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@babel/runtime": "^7.22.5",
+    "@reduxjs/toolkit": "^1.9.5",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.1.0",
+    "react-table": "^7.8.0",
+    "regenerator-runtime": "^0.13.11"
   },
   "devDependencies": {
     "@types/react": "^18.0.37",

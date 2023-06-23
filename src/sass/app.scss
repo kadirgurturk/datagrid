@@ -1,12 +1,18 @@
 @use "./component/login";
 @use "./popup/loginPopup";
+@use "./popup/filterchoice";
 @use "./header/header";
 @use "./component/upcontianer/newButton";
 @use "./component/upcontianer/filter";
+@use "./component/upcontianer/upcontainer";
 @use "./component/downcontainer/row";
 @use "./component/downcontainer/pagaeble";
+@use "./component/downcontainer/downcontainer";
+@use "./component/container/container";
+@use "./component/container/grid";
 @use "./mixin" as m;
 @use "./variable" as v;
+@use "./responsive" as r;
 
 
 *{
@@ -14,4 +20,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: v.$primary-font;
+    
+}
+
+.app{
+    width: 98vw;
+    padding: 0px 29px 0 27px;
+    
 }

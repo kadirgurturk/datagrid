@@ -1,5 +1,5 @@
-import Pagable from "./component/downcontainer/Pageable"
-import Login from "./component/login/Login"
+import Header from "./component/header/Header"
+import Container from "./component/container/Container"
 import "./css/app.css"
 
 
@@ -7,9 +7,10 @@ function App() {
 
 
   return (
-    <>
-      <Login/>
-    </>
+    <div className="app">
+      <Header/>
+      <Container/>
+    </div>
   )
 }
 

@@ -1,0 +1,23 @@
+@mixin tablet {
+    @media all and (max-width:1050px) {
+        @content
+    }
+}
+
+@mixin destkop {
+    @media all and (max-width:1150px) {
+        @content
+    }
+}
+
+@mixin mid-tablet {
+    @media all and (max-width:883px) {
+        @content
+    }
+}
+
+@mixin midimobile {
+    @media all and (max-width:520px) {
+        @content
+    }
+}

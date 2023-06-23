@@ -12,6 +12,7 @@
 @use "./component/container/grid";
 @use "./mixin" as m;
 @use "./variable" as v;
+@use "./responsive" as r;
 
 
 *{
@@ -19,11 +20,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: v.$primary-font;
+    
 }
 
 .app{
-    width: 100vw;
-    height: 100vh;
+    width: 98vw;
     padding: 0px 29px 0 27px;
     
 }

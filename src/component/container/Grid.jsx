@@ -11,16 +11,21 @@ import Down from "../../asset/grid/down.svg"
 
 export default function Grid() {
 
+  const storedData = JSON.parse(localStorage.getItem('dataList'))
+
   let pageReducer = useSelector(state => state.PageNumber.PageNumber)
-  const [data, setData] = useState(DataList);
+  const [data, setData] = useState(storedData);
   const textFilter = useSelector(state => state.TextFilter.text);
   let rowReducer = useSelector(state => state.RowNumber.RowNumber)
 
-  let dispatch = useDispatch()
+  useEffect(() =>{
+    
+  },[])
 
   useEffect(() => {
-    setData(DataList)
-  }, [])
+    const storedData = JSON.parse(localStorage.getItem('dataList')) || [];
+    setData(storedData);
+  }, []);
 
 
 

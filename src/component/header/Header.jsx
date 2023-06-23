@@ -11,10 +11,10 @@ export default function Header() {
         <img id="logo" src={logo} alt="logo" />
         <li className='site_links'>
             <ul>
-                <a href="">Hakkımızda</a>
-                <a href="">Jüri - Yarışma Yazılımı</a>
-                <a href="">Word Ninja</a>
-                <a href="">Word Pyramids</a>
+                <a href=""><span>Hakkımızda</span></a>
+                <a href=""><span>Jüri - Yarışma Yazılımı</span></a>
+                <a href=""><span>Word Ninja</span></a>
+                <a href=""><span>Word Pyramids</span></a>
             </ul>
         </li>
         <li className='social_links'>

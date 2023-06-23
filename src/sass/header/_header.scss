@@ -1,5 +1,6 @@
 @use "../mixin" as m;
 @use "../variable" as v;
+@use "../responsive" as r;
 
 .header{
     width: 100%;
@@ -12,24 +13,47 @@
         top: 33px;
         height: 36.7;
         width:124px ;
+        @include r.destkop{
+            left: 50px;
+        }
+        @include r.tablet{
+            left: 10px;
+        }
+        @include r.mid-tablet{
+            height: 24px;
+            width: 78px ;
+          }
     }
 
     .site_links{
         text-decoration: none;
         list-style-type: none;
+      
         ul{
             width: 539px;
             @include m.flex_row;
             justify-content: space-between;
             align-items: center;
-            list-style: none;          
+            list-style: none; 
+            @include r.mid-tablet{
+                font-size: 12px;
+                width: 450px;
+              }
+                    
             a{
                 text-decoration: none;
                 color: black;
-                cursor: pointer;
-                opacity: .7;
-                &:hover{
-                    opacity: 1;
+               
+               span{
+                @include r.mid-tablet{
+                    
+                  }
+               
+                    cursor: pointer;
+                    opacity: .7;
+                    &:hover{
+                        opacity: 1;
+                    }
                 }
             }
         }       
@@ -38,17 +62,36 @@
     .social_links{
         height: 18px;
         width: 114px;
+        @include r.mid-tablet{
+            height: 15px;
+            width: 100px;
+          }
         position: absolute;
         right: 111px;
         top:49px;
         @include m.flex_row;
         justify-content: space-between;
         align-items: center;
-        opacity: .7;
-        cursor: pointer;
-        &:hover{
-            opacity: 1;
+        @include r.destkop{
+            right: 50px;
         }
+        @include r.tablet{
+            right: 10px;
+        }
+        
+        
+       img{
+        @include r.mid-tablet{
+            height: 12px;
+            width: 12px;
+          }
+         opacity: .7;
+        cursor: pointer;
+            &:hover{
+                opacity: 1;
+                cursor: pointer;
+            }
 
+       }
     }
 }

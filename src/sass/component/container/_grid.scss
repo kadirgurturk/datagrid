@@ -1,13 +1,19 @@
 @use "../../mixin" as m;
 @use "../../variable" as v;
+@use "../../responsive" as r;
 
 .grid{
     
-    width: 1370px;
+    width: 100%;
     height: 700px;
     border: 1px solid #EAEAEA;
     border-radius: 8px;
-
+    @include r.tablet{
+      margin-bottom: 120px;
+    }
+    @include r.mid-tablet{
+      margin-bottom: 180x;
+    }
     img{
         margin-left: 20px;
     }
@@ -24,6 +30,10 @@
         text-align: left;
         padding: 18px;
         width: 460px;
+        @include r.mid-tablet{
+          font-size: 12px;
+          padding: 12px;
+        }
         
       }
 

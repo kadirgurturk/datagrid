@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 let DataList = [
     {
       link: "www.facebook.com",
@@ -181,5 +183,11 @@ let DataList = [
     }
   ];
   
+
+
+  const jsonData = JSON.stringify(DataList);
+  localStorage.setItem('dataList', jsonData);
+
+
 
 export default DataList;

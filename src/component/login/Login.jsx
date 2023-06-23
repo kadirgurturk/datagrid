@@ -38,9 +38,11 @@ export default function Login() {
 
     DataList.push(modal);
 
-    console.log(DataList);
+    const existingData = JSON.parse(localStorage.getItem('dataList')) || [];
+    const updatedData = [...existingData, modal];
+    localStorage.setItem('dataList', JSON.stringify(updatedData));
 
-    
+    console.log(existingData);
   };
 
 

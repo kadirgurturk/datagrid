@@ -1,6 +1,6 @@
 @use "../../mixin" as m;
 @use "../../variable" as v;
-
+@use "../../responsive" as r;
 
 .filter{
     @include m.flex_row;
@@ -8,9 +8,36 @@
     align-items: center;
     width: 440px;
     height: 42px;
+    @include r.mid-tablet{
+        width: 280px;
+        height: 32px;
+      }
+      @include r.big-tel{
+        width: 200px;
+        height: 21px;
+      }
+      @include r.mini-tel{
+        align-items: center;
+        width: 155px;
+        height: 18px;
+      }
+
+      
     .searchInput{
         position: relative;
         width: 380px;
+        @include r.mid-tablet{
+            width: 210px;
+            height: 32px;
+          }
+          @include r.big-tel{
+            width: 150px;
+            height: 21px;
+          }
+          @include r.mini-tel{
+            width: 120px;
+            height: 18px;
+          }
         input{
             border-radius: 39px;
             padding-left: 15px;
@@ -18,6 +45,19 @@
             height: 42px;
             border: 1px solid v.$button-border-color;
             outline: none;
+            opacity: .85;
+            @include r.mid-tablet{
+                width: 210px;
+                height: 32px;
+              }
+            @include r.big-tel{
+                width: 150px;
+                height: 21px;
+              }
+              @include r.mini-tel{
+                width: 120px;
+                height: 18px;
+              }
             &:focus{
                 outline-color: v.$primary-color;
                 border-color: v.$primary-color;
@@ -33,6 +73,26 @@
             position: absolute;
             @include m.center;
             opacity: .85;
+            @include r.mid-tablet{
+                width: 32px;
+                height: 32px;
+              }
+              @include r.big-tel{
+                img{
+                    width: 10px;
+                }
+                top:3px;
+                width: 18px;    
+                height: 21px;
+              }
+              @include r.mini-tel{
+                img{
+                  width: 8px;
+              }
+              top:4.5px;
+              width: 15px;    
+              height: 17px;
+              }
             &:hover{
                 opacity: 1;
             }
@@ -44,9 +104,32 @@
         border-radius: 50%;
         background-color: white;
         @include m.center;
+        @include r.big-tel{
+            width: 34px;    
+            height: 28px;
+          }
+          @include r.mini-tel{
+            width: 25px;    
+            height: 18px;
+          }
         &:hover{
             border: .5px solid v.$primary-color;
         }
+        @include r.big-tel{
+            img{
+                width: 10px;
+            }
+            width: 34px;    
+            height: 28px;
+          }
+          @include r.mini-tel{
+            img{
+              width: 8px;
+          }
+          width: 25px;  
+          height: 21px;
+          }
+          
     }
 
 }

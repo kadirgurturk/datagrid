@@ -1,6 +1,6 @@
 @use "../../mixin" as m;
 @use "../../variable" as v;
-
+@use "../../responsive" as r;
 
 .rowclass{
     font-weight: 500;
@@ -11,8 +11,13 @@
     @include m.flex_row;
     justify-content:space-between;
     align-items: center;
+    @include r.mid-tablet{
+        font-size: 10px;
+        width: 125px;
+      }
+      
     .text{
-        color: v.$primary-color;
+        font-size: 10px;
     }
     .rows{
         height: 37px;
@@ -22,6 +27,11 @@
         @include m.flex_row;
         justify-content: space-around;
         align-items: center;
+        @include r.mid-tablet{
+            height: 30px;
+            width: 75px;
+          }
+        
         .row{
             height: 20px;
             @include m.flex_column;

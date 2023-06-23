@@ -9,10 +9,13 @@
     border: 1px solid #EAEAEA;
     border-radius: 8px;
     @include r.tablet{
-      margin-bottom: 120px;
+      margin-bottom: 35px;
+    }
+    @include r.big-tablet{
+      margin-bottom: 75px;
     }
     @include r.mid-tablet{
-      margin-bottom: 180x;
+      margin-bottom: 35px;
     }
     img{
         margin-left: 20px;
@@ -34,14 +37,28 @@
           font-size: 12px;
           padding: 12px;
         }
+        @include r.mini-tablet{
+          font-size: 9px;
+          padding: 9px;
+          width: 160px;
+        }
+        
         
       }
 
       tr:nth-child(odd) {
         background-color: white;
+        @include r.mini-tablet{
+          padding: 0px;
+         height: 20px;
+        }
       }
 
       tr:nth-child(even) {
+        @include r.mini-tablet{
+          padding: 0px;
+          height: 20px;
+         }
         background-color: #EFF2FF;
       }
       

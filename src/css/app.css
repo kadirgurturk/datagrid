@@ -11,18 +11,74 @@
   line-height: 20px;
   border-radius: 13px;
 }
+@media all and (max-width: 600px) {
+  .login {
+    width: 425px;
+    height: 385px;
+  }
+}
+@media all and (max-width: 600px) {
+  .login {
+    width: 300px;
+    height: 315px;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 16px;
+  }
+}
+@media all and (max-width: 600px) {
+  .login {
+    width: 300px;
+    height: 315px;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 16px;
+  }
+}
+@media all and (max-width: 340px) {
+  .login {
+    width: 260px;
+    height: 290px;
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 14px;
+  }
+}
 .login #close {
   position: absolute;
   width: 24px;
   height: 24px;
   top: 23px;
   right: 25px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+.login #close:hover {
+  opacity: 1;
+}
+@media all and (max-width: 600px) {
+  .login #close {
+    width: 19px;
+    height: 19px;
+    top: 20px;
+    right: 21px;
+  }
 }
 .login form {
   padding: 35px 34px 115px 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+@media all and (max-width: 600px) {
+  .login form {
+    padding: 20px 20px 70px 15px;
+  }
+}
+@media all and (max-width: 340px) {
+  .login form {
+    padding: 15px 15px 50px 10px;
+  }
 }
 .login form label {
   margin: 18px 0 5px 10px;
@@ -39,7 +95,30 @@
   outline-color: #744BFC;
   border-color: #744BFC;
 }
+@media all and (max-width: 600px) {
+  .login form .form_input {
+    width: 365px;
+  }
+}
+@media all and (max-width: 600px) {
+  .login form .form_input {
+    font-size: 11px;
+    padding-left: 10px;
+    width: 270px;
+    height: 30px;
+  }
+}
+@media all and (max-width: 340px) {
+  .login form .form_input {
+    font-size: 9px;
+    padding-left: 10px;
+    width: 235px;
+    height: 30px;
+  }
+}
 .login .form_btn {
+  outline: none;
+  border: none;
   width: 82.76px;
   height: 37.02px;
   border-radius: 34px;
@@ -48,6 +127,19 @@
   justify-content: center;
   align-items: center;
 }
+@media all and (max-width: 600px) {
+  .login .form_btn {
+    width: 70px;
+    height: 30px;
+  }
+}
+@media all and (max-width: 340px) {
+  .login .form_btn {
+    width: 55px;
+    height: 25px;
+    border-radius: 28px;
+  }
+}
 .login #submit-btn {
   position: absolute;
   bottom: 35px;
@@ -55,9 +147,17 @@
   background-color: #744BFC;
   color: white;
   opacity: 0.8;
+  outline: none;
+  border: none;
 }
 .login #submit-btn:hover {
+  cursor: pointer;
   opacity: 1;
+}
+@media all and (max-width: 340px) {
+  .login #submit-btn {
+    font-size: 10px;
+  }
 }
 .login #reset-btn {
   position: absolute;
@@ -65,11 +165,22 @@
   right: 134.24px;
   background-color: #D9D9D9;
   color: #744BFC;
+  opacity: 0.8;
+  outline: none;
+  border: none;
 }
 .login #reset-btn:hover {
+  cursor: pointer;
+  opacity: 1;
   background-color: #d1d2d9;
   border: none;
   outline: none;
+}
+@media all and (max-width: 340px) {
+  .login #reset-btn {
+    right: 102px;
+    font-size: 10px;
+  }
 }
 
 .loginpopup {
@@ -157,10 +268,16 @@
     left: 10px;
   }
 }
-@media all and (max-width: 883px) {
+@media all and (max-width: 950px) {
   .header #logo {
     height: 24px;
     width: 78px;
+  }
+}
+@media all and (max-width: 720px) {
+  .header #logo {
+    height: 20px;
+    width: 65px;
   }
 }
 .header .site_links {
@@ -175,10 +292,22 @@
   align-items: center;
   list-style: none;
 }
-@media all and (max-width: 883px) {
+@media all and (max-width: 950px) {
   .header .site_links ul {
     font-size: 12px;
     width: 450px;
+  }
+}
+@media all and (max-width: 720px) {
+  .header .site_links ul {
+    width: 350px;
+    font-size: 10px;
+  }
+}
+@media all and (max-width: 600px) {
+  .header .site_links ul {
+    width: 300px;
+    font-size: 9px;
   }
 }
 .header .site_links ul a {
@@ -203,10 +332,10 @@
   justify-content: space-between;
   align-items: center;
 }
-@media all and (max-width: 883px) {
+@media all and (max-width: 950px) {
   .header .social_links {
     height: 15px;
-    width: 100px;
+    width: 80px;
   }
 }
 @media all and (max-width: 1150px) {
@@ -223,7 +352,7 @@
   opacity: 0.7;
   cursor: pointer;
 }
-@media all and (max-width: 883px) {
+@media all and (max-width: 950px) {
   .header .social_links img {
     height: 12px;
     width: 12px;
@@ -248,6 +377,24 @@
   opacity: 0.85;
   cursor: pointer;
 }
+@media all and (max-width: 950px) {
+  .newButton {
+    width: 120px;
+    height: 32px;
+  }
+}
+@media all and (max-width: 600px) {
+  .newButton {
+    width: 100px;
+    height: 28px;
+  }
+}
+@media all and (max-width: 340px) {
+  .newButton {
+    width: 75px;
+    height: 18px;
+  }
+}
 .newButton:hover {
   opacity: 1;
 }
@@ -256,10 +403,44 @@
   width: 19px;
   height: 19px;
 }
+@media all and (max-width: 600px) {
+  .newButton img {
+    margin-right: 7px;
+    width: 12px;
+    height: 12px;
+  }
+}
+@media all and (max-width: 340px) {
+  .newButton img {
+    width: 10px;
+    height: 10px;
+  }
+}
 .newButton span {
   font-weight: 500;
   font-size: 13px;
   line-height: 21px;
+}
+@media all and (max-width: 950px) {
+  .newButton span {
+    font-size: 10px;
+    line-height: 18px;
+    font-weight: 400;
+  }
+}
+@media all and (max-width: 600px) {
+  .newButton span {
+    font-size: 8px;
+    line-height: 15px;
+    font-weight: 300;
+  }
+}
+@media all and (max-width: 340px) {
+  .newButton span {
+    font-size: 6px;
+    line-height: 12px;
+    font-weight: 300;
+  }
 }
 
 .filter {
@@ -270,9 +451,46 @@
   width: 440px;
   height: 42px;
 }
+@media all and (max-width: 950px) {
+  .filter {
+    width: 280px;
+    height: 32px;
+  }
+}
+@media all and (max-width: 600px) {
+  .filter {
+    width: 200px;
+    height: 21px;
+  }
+}
+@media all and (max-width: 340px) {
+  .filter {
+    align-items: center;
+    width: 155px;
+    height: 18px;
+  }
+}
 .filter .searchInput {
   position: relative;
   width: 380px;
+}
+@media all and (max-width: 950px) {
+  .filter .searchInput {
+    width: 210px;
+    height: 32px;
+  }
+}
+@media all and (max-width: 600px) {
+  .filter .searchInput {
+    width: 150px;
+    height: 21px;
+  }
+}
+@media all and (max-width: 340px) {
+  .filter .searchInput {
+    width: 120px;
+    height: 18px;
+  }
 }
 .filter .searchInput input {
   border-radius: 39px;
@@ -281,6 +499,25 @@
   height: 42px;
   border: 1px solid #D9D9D9;
   outline: none;
+  opacity: 0.85;
+}
+@media all and (max-width: 950px) {
+  .filter .searchInput input {
+    width: 210px;
+    height: 32px;
+  }
+}
+@media all and (max-width: 600px) {
+  .filter .searchInput input {
+    width: 150px;
+    height: 21px;
+  }
+}
+@media all and (max-width: 340px) {
+  .filter .searchInput input {
+    width: 120px;
+    height: 18px;
+  }
 }
 .filter .searchInput input:focus {
   outline-color: #744BFC;
@@ -300,6 +537,32 @@
   align-items: center;
   opacity: 0.85;
 }
+@media all and (max-width: 950px) {
+  .filter .searchInput .search {
+    width: 32px;
+    height: 32px;
+  }
+}
+@media all and (max-width: 600px) {
+  .filter .searchInput .search {
+    top: 3px;
+    width: 18px;
+    height: 21px;
+  }
+  .filter .searchInput .search img {
+    width: 10px;
+  }
+}
+@media all and (max-width: 340px) {
+  .filter .searchInput .search {
+    top: 4.5px;
+    width: 15px;
+    height: 17px;
+  }
+  .filter .searchInput .search img {
+    width: 8px;
+  }
+}
 .filter .searchInput .search:hover {
   opacity: 1;
 }
@@ -313,8 +576,38 @@
   justify-content: center;
   align-items: center;
 }
+@media all and (max-width: 600px) {
+  .filter .filterchoice {
+    width: 34px;
+    height: 28px;
+  }
+}
+@media all and (max-width: 340px) {
+  .filter .filterchoice {
+    width: 25px;
+    height: 18px;
+  }
+}
 .filter .filterchoice:hover {
   border: 0.5px solid #744BFC;
+}
+@media all and (max-width: 600px) {
+  .filter .filterchoice {
+    width: 34px;
+    height: 28px;
+  }
+  .filter .filterchoice img {
+    width: 10px;
+  }
+}
+@media all and (max-width: 340px) {
+  .filter .filterchoice {
+    width: 25px;
+    height: 21px;
+  }
+  .filter .filterchoice img {
+    width: 8px;
+  }
 }
 
 .upcontainer {
@@ -336,8 +629,14 @@
   justify-content: space-between;
   align-items: center;
 }
+@media all and (max-width: 950px) {
+  .rowclass {
+    font-size: 10px;
+    width: 125px;
+  }
+}
 .rowclass .text {
-  color: #744BFC;
+  font-size: 10px;
 }
 .rowclass .rows {
   height: 37px;
@@ -348,6 +647,12 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+}
+@media all and (max-width: 950px) {
+  .rowclass .rows {
+    height: 30px;
+    width: 75px;
+  }
 }
 .rowclass .rows .row {
   height: 20px;
@@ -390,10 +695,26 @@
   -webkit-appearance: none;
   margin: 0;
 }
+@media all and (max-width: 950px) {
+  .pagaeble {
+    width: 80px;
+    font-size: 13px;
+  }
+}
+@media all and (max-width: 600px) {
+  .pagaeble {
+    font-size: 11px;
+  }
+}
 .pagaeble .left {
   transform: rotate(180deg);
   opacity: 0.75;
   cursor: pointer;
+}
+@media all and (max-width: 600px) {
+  .pagaeble .left {
+    height: 18px;
+  }
 }
 .pagaeble .left:hover {
   opacity: 1;
@@ -402,12 +723,31 @@
   transform: rotate(180deg);
   opacity: 0.15;
 }
+@media all and (max-width: 600px) {
+  .pagaeble .disableLeft {
+    height: 18px;
+  }
+}
 .pagaeble #currpage {
   width: 21px;
   height: 25px;
   border: 0.5px solid #EAEAEA;
   border-radius: 4px;
   text-align: center;
+}
+@media all and (max-width: 950px) {
+  .pagaeble #currpage {
+    width: 17px;
+    height: 21px;
+    font-size: 14px;
+  }
+}
+@media all and (max-width: 600px) {
+  .pagaeble #currpage {
+    width: 14px;
+    height: 15px;
+    font-size: 11px;
+  }
 }
 .pagaeble #currpage:focus {
   outline-color: #744BFC;
@@ -416,18 +756,38 @@
 .pagaeble #text {
   color: #C9C9C9;
 }
+@media all and (max-width: 600px) {
+  .pagaeble #text {
+    font-size: 11px;
+  }
+}
 .pagaeble #totalpage {
   color: #744BFC;
+}
+@media all and (max-width: 600px) {
+  .pagaeble #totalpage {
+    font-size: 11px;
+  }
 }
 .pagaeble .right {
   opacity: 0.75;
   cursor: pointer;
+}
+@media all and (max-width: 600px) {
+  .pagaeble .right {
+    height: 18px;
+  }
 }
 .pagaeble .right:hover {
   opacity: 1;
 }
 .pagaeble .disableRight {
   opacity: 0.15;
+}
+@media all and (max-width: 600px) {
+  .pagaeble .disableRight {
+    height: 18px;
+  }
 }
 
 .downcontainer {
@@ -436,6 +796,11 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+@media all and (max-width: 340px) {
+  .downcontainer {
+    margin: 25px 10px;
+  }
 }
 
 .container {
@@ -448,7 +813,28 @@
 @media all and (max-width: 1050px) {
   .container {
     padding: 44px 80px 0 60px;
-    height: 980px;
+    height: 950px;
+  }
+}
+@media all and (max-width: 950px) {
+  .container {
+    height: 900px;
+    padding: 24px 55px 20px 30px;
+  }
+}
+@media all and (max-width: 600px) {
+  .container {
+    padding: 18px 40px 15px 22px;
+  }
+}
+@media all and (max-width: 480px) {
+  .container {
+    padding: 10px 28px 10px 15px;
+  }
+}
+@media all and (max-width: 340px) {
+  .container {
+    padding: 10px 0;
   }
 }
 
@@ -460,12 +846,17 @@
 }
 @media all and (max-width: 1050px) {
   .grid {
-    margin-bottom: 120px;
+    margin-bottom: 35px;
   }
 }
-@media all and (max-width: 883px) {
+@media all and (max-width: 1000px) {
   .grid {
-    margin-bottom: 180x;
+    margin-bottom: 75px;
+  }
+}
+@media all and (max-width: 950px) {
+  .grid {
+    margin-bottom: 35px;
   }
 }
 .grid img {
@@ -483,17 +874,36 @@
   padding: 18px;
   width: 460px;
 }
-@media all and (max-width: 883px) {
+@media all and (max-width: 950px) {
   .grid td, .grid th {
     font-size: 12px;
     padding: 12px;
   }
 }
+@media all and (max-width: 720px) {
+  .grid td, .grid th {
+    font-size: 9px;
+    padding: 9px;
+    width: 160px;
+  }
+}
 .grid tr:nth-child(odd) {
   background-color: white;
 }
+@media all and (max-width: 720px) {
+  .grid tr:nth-child(odd) {
+    padding: 0px;
+    height: 20px;
+  }
+}
 .grid tr:nth-child(even) {
   background-color: #EFF2FF;
+}
+@media all and (max-width: 720px) {
+  .grid tr:nth-child(even) {
+    padding: 0px;
+    height: 20px;
+  }
 }
 
 * {
@@ -506,4 +916,10 @@
 .app {
   width: 98vw;
   padding: 0px 29px 0 27px;
+}
+@media all and (max-width: 600px) {
+  .app {
+    padding: 0;
+    width: 100vw;
+  }
 }/*# sourceMappingURL=app.css.map */

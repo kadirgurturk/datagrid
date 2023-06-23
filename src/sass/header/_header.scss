@@ -23,6 +23,10 @@
             height: 24px;
             width: 78px ;
           }
+        @include r.mini-tablet{
+            height: 20px;
+            width: 65px;
+          }
     }
 
     .site_links{
@@ -39,6 +43,15 @@
                 font-size: 12px;
                 width: 450px;
               }
+              @include r.mini-tablet{
+                width: 350px;
+                font-size: 10px;
+              }
+              @media all and (max-width:600px) {
+                width: 300px;
+                font-size: 9px;
+            }
+
                     
             a{
                 text-decoration: none;
@@ -64,7 +77,7 @@
         width: 114px;
         @include r.mid-tablet{
             height: 15px;
-            width: 100px;
+            width: 80px;
           }
         position: absolute;
         right: 111px;

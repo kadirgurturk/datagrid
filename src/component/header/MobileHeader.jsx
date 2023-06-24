@@ -10,11 +10,11 @@ export default function MobileHeader() {
     const [isOpen,setOpen] = useState(false)
 
   return (
-    <nav className='mobileheader'>
+    <>
       {
         isOpen ? (
-            <nav className='sidebar'>
-            <img onClick={()=>{setOpen(false)}} id="hamburgerclose" src={hamburger} alt="hamburger" />
+            <nav className='sidebar' onMouseLeave={()=>{setOpen(false)}}>
+            <img id="logo" src={logo} alt="logo" />
             <li className='site_links'>
               <ul>
                 <a href=""><span>Hakkımızda</span></a>
@@ -33,12 +33,12 @@ export default function MobileHeader() {
             
           ) : (
             <div className='mobileheader'>
-                <img onClick={()=>{setOpen(true)}} id="hamburger" src={hamburger} alt="hamburger" />
+                <img onMouseEnter={()=>{setOpen(true)}} id="hamburger" src={hamburger} alt="hamburger" />
                 <img id="logo" src={logo} alt="logo" />
             </div>
             )
       }
 
-    </nav>
+    </>
   )
 }

@@ -13,6 +13,7 @@
         left: 40px;
         top: 15px;
         height: 25px;
+        cursor: pointer;
         
     }
 
@@ -25,24 +26,79 @@
         width: 85px;
     }
 
-    .sidebar{
-        z-index: 15;
-        position: fixed;
-        top: 0;
-        left: 0px;
-        width: 300px;
-        height: 80vh;
-        background-color: #fef8f8;
-        transition: left 0.3s ease;
-        #hamburgerclose{
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            border:1px solid v.$primary-font;
-            border-radius: 5px;
-            padding: 12px;
-            
-        }
+}
+
+.sidebar{
+    z-index: 15;
+    position: fixed;
+    top: 0;
+    left: 0px;
+    width: 300px;
+    height: 70vh;
+    background-color: #fef8f8;
+    transition: left 0.3s ease;
+    border-radius: 0 0 15px 0;
+    border-right: 1px solid #d4c7ff;;
+    border-bottom: 1px solid #d4c7ff;;
+    #logo{
+        position: absolute;
+        top: 8%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 35px;
+        width: 85px;
     }
 
+    .site_links{
+        text-decoration: none;
+        list-style-type: none;
+        position: absolute;
+        top: 100px;
+        left: 25px;
+        ul{
+            width: 250px;
+            height: 210px;
+            @include m.flex_column;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;             
+            a{  
+                width: 100%;
+                text-decoration: none;
+                color: black;
+                border-bottom: 1px solid rgb(220, 220, 220);
+                
+                border-radius: 0 0 15px 0;        
+               span{
+                    cursor: pointer;
+                    opacity: .5;
+                    &:hover{
+                        opacity: 1;
+                    }
+                }
+            }
+        }       
+    }
+
+
+    .social_links{
+        position: absolute;
+        bottom: 35px;
+        left: 100px;
+        height: 18px;
+        width: 114px;
+        @include m.flex_row;
+        justify-content: space-between;
+        align-items: center;
+       
+       img{
+         opacity: .7;
+        cursor: pointer;
+            &:hover{
+                opacity: 1;
+                cursor: pointer;
+            }
+
+       }
+    }
 }

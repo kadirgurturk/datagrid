@@ -1,0 +1,48 @@
+@use "../mixin" as m;
+@use "../variable" as v;
+@use "../responsive" as r;
+
+
+.mobileheader{
+    position: relative;
+    width: 100vw;
+    height: 50px;
+
+    #hamburger{
+        position: absolute;
+        left: 40px;
+        top: 15px;
+        height: 25px;
+        
+    }
+
+    #logo{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 35px;
+        width: 85px;
+    }
+
+    .sidebar{
+        z-index: 15;
+        position: fixed;
+        top: 0;
+        left: 0px;
+        width: 300px;
+        height: 80vh;
+        background-color: #fef8f8;
+        transition: left 0.3s ease;
+        #hamburgerclose{
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            border:1px solid v.$primary-font;
+            border-radius: 5px;
+            padding: 12px;
+            
+        }
+    }
+
+}

@@ -1,6 +1,7 @@
 @use "../mixin" as m;
 @use "../variable" as v;
 @use "../responsive" as r;
+@use "./mobileheader";
 
 .header{
     width: 100%;

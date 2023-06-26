@@ -185,7 +185,7 @@ let DataList = [
   
   
   if(localStorage.getItem("dataList") === null){
-    localStorage.setItem('dataList', JSON.stringify(DataList))
+    localStorage.setItem('dataList', JSON.stringify(DataList)) //------> local'de dataList isimli array yoksa kaydederiz.
   }
 
   

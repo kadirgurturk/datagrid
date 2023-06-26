@@ -10,35 +10,31 @@ import Down from "../../asset/grid/down.svg"
 
 export default function Grid() {
 
-  const storedData = JSON.parse(localStorage.getItem('dataList'));
+  const storedData = JSON.parse(localStorage.getItem('dataList')); //------->local'den gerekli listeyi buradan alırız.
 
-  let pageReducer = useSelector(state => state.PageNumber.PageNumber)
+  let pageReducer = useSelector(state => state.PageNumber.PageNumber) //-----> sayfa sayısını store'dan alırız.
+  let textFilter = useSelector(state => state.TextFilter.text)
   const [data, setData] = useState(storedData || []);
-  const textFilter = useSelector(state => state.TextFilter.text);
-  let rowReducer = useSelector(state => state.RowNumber.RowNumber)
+  let rowReducer = useSelector(state => state.RowNumber.RowNumber) //-----> gösterilecek satır sayısını store'dan alırız.
 
   useEffect(() => {
     const updatedData = JSON.parse(localStorage.getItem('dataList'));
-    setData(updatedData || []);
-  }, [localStorage.getItem('dataList')]);
+    setData(updatedData || []); 
+  }, [localStorage.getItem('dataList')]); //-----> localstorage yenilendiği zaman, datayı yeniliyoruz. 
 
-  console.log(data);
 
 
   const columnsMemo = useMemo(() => COLUMNS, [])
-  const dataMemo = useMemo(()=> data,[storedData])
+  const dataMemo = useMemo(()=> data,[storedData]) //-----------> react-table, chach için  datalar ve column özelliklerini useMemo ile kullanmayı öneriyor.
 
   const tableInstance = useTable({
     columns: columnsMemo,
     data: data,
   },
-  
     useGlobalFilter,
     useSortBy,
     usePagination,
-    
-    
-  )
+  ) //---> bir table nesnesi yaratırız ve buna gerekli column ve dataları veriririz, ayrıca sorting, filter ve pagination işlmeleri için gerekli hookları alırız.
 
   const {
     getTableProps,
@@ -54,9 +50,7 @@ export default function Grid() {
     state,
     setGlobalFilter,
     setPageSize,
-  } = tableInstance
-
-  const { globalFilter, pageSize, pageIndex } = state;
+  } = tableInstance //---> table isntance'ın gerekli fonksiyonlarını alırız.
 
   useEffect(() => {
     setGlobalFilter(textFilter);
@@ -70,6 +64,8 @@ export default function Grid() {
   useEffect(() => {
     setPageSize(rowReducer);
   }, [rowReducer]);
+
+  //---------------------->store'dan aldığımız değerleri table nesnesindeki gerekli state'lere veriririz. 
 
 
 

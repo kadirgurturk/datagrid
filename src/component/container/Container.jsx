@@ -12,3 +12,4 @@ export default function Container() {
     </div>
   )
 }
+//Grid yapısnın tüm bileşenlerini daha rahat handle edebilmek için burada birleştirildi.

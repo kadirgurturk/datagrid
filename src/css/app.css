@@ -883,7 +883,7 @@
 }
 
 .downcontainer {
-  margin: 25px 5px;
+  margin: 65px 5px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -897,7 +897,7 @@
 
 .container {
   width: 100%;
-  height: 865px;
+  height: 915px;
   background: linear-gradient(180deg, #EFF2FF -30.56%, rgba(232, 236, 255, 0) 135.85%);
   border-radius: 6px;
   padding: 44px 80px 20px 60px;
@@ -905,13 +905,13 @@
 @media all and (max-width: 1050px) {
   .container {
     padding: 44px 80px 0 60px;
-    height: 950px;
+    height: 1080px;
   }
 }
 @media all and (max-width: 950px) {
   .container {
     height: 900px;
-    padding: 24px 55px 20px 30px;
+    padding: 24px 55px 0px 30px;
   }
 }
 @media all and (max-width: 600px) {
@@ -943,12 +943,12 @@
 }
 @media all and (max-width: 1000px) {
   .grid {
-    margin-bottom: 75px;
+    margin-bottom: 35px;
   }
 }
 @media all and (max-width: 950px) {
   .grid {
-    margin-bottom: 35px;
+    margin-bottom: 45px;
   }
 }
 .grid img {
@@ -1007,7 +1007,7 @@
 
 .app {
   width: 98vw;
-  padding: 0px 29px 0 27px;
+  padding: 0px 29px 35px 27px;
 }
 @media all and (max-width: 600px) {
   .app {

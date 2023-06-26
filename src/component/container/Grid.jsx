@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useMemo } from 'react'
-import DataList from '../data/DataList'
 import { useTable, useSortBy, useGlobalFilter, usePagination } from "react-table"
 import { TextChange } from "../../reducers/TextReducer"
 import { RowChange } from '../../reducers/RowNumberReducer';
@@ -11,30 +10,27 @@ import Down from "../../asset/grid/down.svg"
 
 export default function Grid() {
 
-  const storedData = JSON.parse(localStorage.getItem('dataList'))
+  const storedData = JSON.parse(localStorage.getItem('dataList'));
 
   let pageReducer = useSelector(state => state.PageNumber.PageNumber)
-  const [data, setData] = useState(storedData);
+  const [data, setData] = useState(storedData || []);
   const textFilter = useSelector(state => state.TextFilter.text);
   let rowReducer = useSelector(state => state.RowNumber.RowNumber)
 
-  useEffect(() =>{
-    
-  },[])
-
   useEffect(() => {
-    const storedData = JSON.parse(localStorage.getItem('dataList')) || [];
-    setData(storedData);
-  }, []);
+    const updatedData = JSON.parse(localStorage.getItem('dataList'));
+    setData(updatedData || []);
+  }, [localStorage.getItem('dataList')]);
 
+  console.log(data);
 
 
   const columnsMemo = useMemo(() => COLUMNS, [])
-  const dataMemo = useMemo(() => data, [])
+  const dataMemo = useMemo(()=> data,[storedData])
 
   const tableInstance = useTable({
     columns: columnsMemo,
-    data: dataMemo,
+    data: data,
   },
   
     useGlobalFilter,

@@ -183,11 +183,11 @@ let DataList = [
     }
   ];
   
+  
+  if(localStorage.getItem("dataList") === null){
+    localStorage.setItem('dataList', JSON.stringify(DataList))
+  }
 
-
-  const jsonData = JSON.stringify(DataList);
-  localStorage.setItem('dataList', jsonData);
-
-
+  
 
 export default DataList;

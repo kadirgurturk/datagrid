@@ -1,7 +1,7 @@
 import React from 'react'
 import close from "../../asset/login/close.svg"
-import DataModal from '../data/DataModal';
-import DataList from '../data/DataList';
+import DataModal from '../../data/DataModal';
+import DataList from '../../data/DataList';
 import { useDispatch } from 'react-redux'; 
 import { LoginOff } from '../../reducers/LoginOffReducer';
 
@@ -36,13 +36,14 @@ export default function Login() {
       description: modal.description
     };
 
+    const storedData = JSON.parse(localStorage.getItem('dataList'))
+
     DataList.push(modal);
+    storedData.push(modal);
 
-    const existingData = JSON.parse(localStorage.getItem('dataList')) || [];
-    const updatedData = [...existingData, modal];
-    localStorage.setItem('dataList', JSON.stringify(updatedData));
+   localStorage.setItem('dataList', JSON.stringify(storedData));
 
-    console.log(existingData);
+
   };
 
 
@@ -51,7 +52,7 @@ export default function Login() {
 
         <img onClick={closeLogin} src={close} id='close' alt="close" />
 
-            <form >
+            <form onSubmit={handleSubmit}>
             <label htmlFor="link">Sosyal Medya Linki:</label>
             <input className='form_input' type="text" id="link" name="link" pattern="www\..{3,}" required/>
   
@@ -63,7 +64,7 @@ export default function Login() {
   
             
             <button className='form_btn' id='reset-btn' type="reset" value="Sıfırla">Sıfırla</button>
-            <button onClick={handleSubmit} className='form_btn' id='submit-btn' type="submit" value="Gönder">Gönder</button>
+            <button  className='form_btn' id='submit-btn' type="submit" value="Gönder">Gönder</button>
             
             </form>
     </div>

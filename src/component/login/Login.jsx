@@ -39,7 +39,7 @@ export default function Login() {
     const storedData = JSON.parse(localStorage.getItem('dataList'))
 
     DataList.push(modal);
-    storedData.push(modal);
+    storedData.push(modal);  //----> hem data sınıfına hem'de localdeki dataya yeni modal'i ekleriz.
 
    localStorage.setItem('dataList', JSON.stringify(storedData));
 

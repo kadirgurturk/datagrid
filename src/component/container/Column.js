@@ -14,4 +14,6 @@ let COLUMNS = [
 
 ]
 
+// Header kısmı tablo'nun başlığı için, accessor ise tablo ile dataların eşlenmesi için.
+
 export default COLUMNS;

@@ -8,15 +8,14 @@ export default function () {
   const storedData = JSON.parse(localStorage.getItem('dataList'))
 
 
-  const [inputVal,setInpuVal] = useState("")
-  const [currpage, setCurrPage] = useState(inputVal);
-  const [rightArrow,setRightArrow] = useState(true);
-  const [leftArrow,setLefttArrow] = useState(true);
+  const [inputVal,setInpuVal] = useState("")          //--------> input'a girilen sayfa sayısını alabilmek için açılan state
+  const [currpage, setCurrPage] = useState(inputVal); //--------> 2 farklı sayfa belirleme yolu olduğu için iki yol için girilen asıl state.
+  const [rightArrow,setRightArrow] = useState(true);  //--------> sayfa saysı limit'e dayandığında, style olarak disabled etmek için
+  const [leftArrow,setLefttArrow] = useState(true);   //--------> sayfa saysı minimum'a indiğinde, style olarak disabled etmek için
   const [totalPage, setTotalPage] = useState(8);
   
-  let row = useSelector(state => state.RowNumber.RowNumber)
+  let row = useSelector(state => state.RowNumber.RowNumber) //----> toplam sayfa sayısı formülü için data sayısı ve satır sayısına ihtiyacım var, bu sebeple satır sayısnı store'dan alrız.
 
-  
 
   let dispatch = useDispatch();
 
@@ -40,9 +39,9 @@ export default function () {
 
   const handleCurrPageChange = (event) => {
     const value = event.target.value;
-    const parsedValue = parseInt(value, 10);
+    const parsedValue = parseInt(value, 10); //-----> inputa girilen string'i number'a dönüştürüz.
   
-    if (parsedValue > totalPage || parsedValue < 1 || isNaN(parsedValue)) {
+    if (parsedValue > totalPage || parsedValue < 1 || isNaN(parsedValue)) {  //-------> Sayfayı belirleyen input'a geçersiz bir değer girilmesi durumunda durumu handle edilmesi için.
       alert(`Lütfen 1 ile ${totalPage} arası bir sayı giriniz`);
 
       return;
@@ -62,7 +61,7 @@ export default function () {
     }
     
     setTotalPage(newTotalPage)
-  },[row,storedData])
+  },[row,storedData])  //-----> toplam sayfa sayısını hesaplıyoruz, bağlı değişkenler değiştirdiğimiz zaman
 
   useEffect(() => {
     setInpuVal(1);
@@ -89,9 +88,7 @@ export default function () {
       setLefttArrow(true)
     }
 
-}, [currpage,inputVal]);
-
-
+}, [currpage,inputVal]); //------> sağ ve sol oklar için disable durumlarını kpntrol ederiz.
 
 
   return (

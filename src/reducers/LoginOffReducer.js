@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+//Login popup kapatmak için reducer tanımlıyoruz.
 
 const LoginOffReducer = createSlice({
     name:"LoginOff",

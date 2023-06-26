@@ -10,20 +10,18 @@ const HIGHER_ROW = 8;
 export default function Pagable() {
 
   const [row, setRow] = useState(6);
-  const [upBtn, setUpBtn] = useState(false);
-  const [downBtn, setDownBtn] = useState(false);
+  const [upBtn, setUpBtn] = useState(false); //---------> satır saysı limit'e dayandığında, style olarak disabled etmek için
+  const [downBtn, setDownBtn] = useState(false); //-----> satır saysı minimum'a indiğinde, style olarak disabled etmek için
 
   let dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(RowChange(row))
-  }, [row])
+  
 
   const upRow = () => {
     if (row < HIGHER_ROW) {
       let newRow = row + 1;
       setRow(newRow)
-      dispatch(RowChange(newRow))
+      dispatch(RowChange(newRow)) //-------> Satır sayısını +1 yükseltiriyoruz ve store'u yeniliyoruz. 
     }
   }
 
@@ -31,7 +29,7 @@ export default function Pagable() {
     if (row > BOTTOM_ROW) {
       let newRow = row - 1;
       setRow(newRow)
-      dispatch(RowChange(newRow))
+      dispatch(RowChange(newRow)) //-------> Satır sayısını -1 azaltıyoruz ve store'u yeniliyoruz. 
     }
   }
 
@@ -49,7 +47,7 @@ export default function Pagable() {
       setDownBtn(false);
     }
 
-  }, [row]);
+  }, [row]); //Satır sayısnın limitler'e varıp varmadığını kontrol edeiyoruz.
 
 
 

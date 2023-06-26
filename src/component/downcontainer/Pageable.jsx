@@ -2,9 +2,12 @@ import React,{useState,useEffect} from 'react'
 import arrow from "../../asset/downcontainer/arrow.svg"
 import { useDispatch,useSelector } from 'react-redux'; 
 import { PageChange } from '../../reducers/PageNumberReducer';
-import DataList from '../data/DataList';
 
 export default function () {
+
+  const storedData = JSON.parse(localStorage.getItem('dataList'))
+
+
   const [inputVal,setInpuVal] = useState("")
   const [currpage, setCurrPage] = useState(inputVal);
   const [rightArrow,setRightArrow] = useState(true);
@@ -49,17 +52,17 @@ export default function () {
   };
 
   useEffect(() =>{
-    let info = (DataList.length % row === 0);
+    let info = (storedData.length % row === 0);
     
     let newTotalPage = 0;
     if(info){
-      newTotalPage = Math.floor(DataList.length / row)
+      newTotalPage = Math.floor(storedData.length / row)
     }else{
-      newTotalPage = Math.floor(DataList.length / row) + 1;
+      newTotalPage = Math.floor(storedData.length / row) + 1;
     }
     
     setTotalPage(newTotalPage)
-  },[row,DataList])
+  },[row,storedData])
 
   useEffect(() => {
     setInpuVal(1);

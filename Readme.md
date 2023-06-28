@@ -21,6 +21,14 @@
 
 <img src="./src/readmeImg/row1.png" height="104">
 
+- Sayfa sayısıni belirleyen input bölümüne geçersiz bir değer girerseniz uyarı alırsınız.
+
+<img src="./src/readmeImg/warn.png" height="55">
+
+- Sutün başlıklarına basarak gösterilen datayı o sutün verileri için alfabetik sıraya alabilirsiniz.
+
+<img src="./src/readmeImg/sorting.png" height="114">
+
 ## Kullanılan Teknolojiler ve Bağımlılıklar
 
 - Proje React.js kullanılar hazırlanmıştır.
@@ -96,9 +104,16 @@ npm run lint
     reducers/
     sass/
     store/
-App.jsx
-index.css
-main.jsx    
+    - App.jsx
+    - index.css
+    - main.jsx
+- .eslintrc.cjs
+- .gitignore
+- index.html
+- package-lock.json
+- package.json
+- Readme.md 
+- vite.config.js    
 ```
 Genel dizin yapısı bu şekilde dir.
 
@@ -112,9 +127,27 @@ asset/
     upcontainer/
 ```
 
-- component
+- component : Proje içindeki tüm Component'lerin tutulduğu bölüm
 ```
-
+    container/
+        - Column.js      --------> React-table için gerekli sütun ayarlamalrını yapıldığı yer.
+        - Container.jsx  --------> Grid, DownContainer, ve UpContianer kısımlarını içine alan bölüm.
+        - Grid.jsx       --------> Grid yapısı burada bulunur.
+    downcontainer/
+        - DownContianer.jsx -----> Pagable ve Row componenetleri burada bulunur
+        - Pageable.jsx    -------> Sayfanın sağ altında bulunan ve sayfa bumarasını belirleyen elementler burada bulunur.
+        - Row.jsx         -------> Sayfanın sol altında bulunan ve grid yapısının satır sayısını ayarlayan elemanlar burada bulunur
+    header/
+        - Header.jsx       ------> Navbar kısmı.
+        - MobileHeader.jsx  -----> Belirli bir genişliğin altında header.
+    login/
+        - Login.jsx         -----> Datayı eklediğimiz form kısmı burada bulunur.
+    popup/
+        - LoginPopup.jsx    -----> Login kısmı burada bulunur, Login componeneti popup gibi davranır.
+    upcontainer/
+        - Filter.jsx        -----> Dataları filtrelemek için input bulunur.
+        - NewButton.jsx     -----> Yeni bir data girişi istendiğinde, login popup'ını açmak için button bulunur.
+        - UpContainer.jsx   -----> Filter ve NewButton kısımları bulunur.
 ```
 
 -css: scss ile derlenenen css dosyası bu klasörde tutulur. 

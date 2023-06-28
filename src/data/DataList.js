@@ -166,21 +166,6 @@ let DataList = [
       socialMedia: "VK",
       description: "Rusya merkezli sosyal ağ ve mesajlaşma platformu"
     },
-    {
-      link: "www.etsy.com",
-      socialMedia: "Etsy",
-      description: "El yapımı ve vintage ürünlerin satıldığı bir e-ticaret platformu"
-    },
-    {
-      link: "www.meetup.com",
-      socialMedia: "Meetup",
-      description: "Ortak ilgi alanlarına sahip insanların buluştuğu etkinlik ve toplantı organizasyon platformu"
-    },
-    {
-      link: "www.last.fm",
-      socialMedia: "Last.fm",
-      description: "Müzik keşfetme ve müzik beğeni paylaşım platformu"
-    }
   ];
   
   

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import close from "../../asset/login/close.svg"
 import DataModal from '../../data/DataModal';
 import DataList from '../../data/DataList';
@@ -6,6 +6,9 @@ import { useDispatch } from 'react-redux';
 import { LoginOff } from '../../reducers/LoginOffReducer';
 
 export default function Login() {
+
+  const [isSubmit,setSubmit] = useState(false)
+
 
   
   let dispatch = useDispatch()
@@ -43,12 +46,23 @@ export default function Login() {
 
    localStorage.setItem('dataList', JSON.stringify(storedData));
 
+   afterSubmit();
 
+   document.getElementById('link').value = "";
+   document.getElementById('socialMedia').value = "";
+   document.getElementById('description').value = "";
   };
 
 
+  const afterSubmit = () =>{
+    setSubmit(true)
+
+    setTimeout(()=>{ setSubmit(false)},1500)
+  }
+
+
   return (
-    <div className='login'>
+    <div className='login' style={isSubmit ? {outline:"5px solid rgba(0, 245, 75, 0.8)"} : {outline: "none"}}>
 
         <img onClick={closeLogin} src={close} id='close' alt="close" />
 

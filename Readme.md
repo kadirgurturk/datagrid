@@ -2,7 +2,7 @@
 
 ### Bu proje, React ile geliştirilmiş bir DataGrid projesidir. Girilen sosyal medya bilgilerini belirli bir grid için'de rahatça gösterir ve bu dataları kişinin Localstorage'ına kayıt eder.
 
-<img src="./src/readmeImg/destkopup.png" height="187">
+<img src="./src/readmeImg/destkopup.png" height="237">
 
 
 ## Kullanım
@@ -10,24 +10,24 @@
 - Sol üsteki arama kutsuna girilen değer ile data arası arama yapılabilir.
 
 
-<img src="./src/readmeImg/search.png" height="115">
+<img src="./src/readmeImg/search.png" height="205">
 
 
 - Sağ üsteki "Yeni Hesap Ekle" butonuna tıklarsanız yeni sosyal medya girebilceğiniz loign paneli açılır.
 
-<img src="./src/readmeImg/login.png" height="142">
+<img src="./src/readmeImg/login.png" height="202">
 
 - Sayfanın altındaki bölümler'de ise grid yapsının kaç satırlı olacağı ve sayfa numarasını seçebilirsiniz. Satır sayısı en fazla 8 en az 4 olabilir.
 
-<img src="./src/readmeImg/row1.png" height="104">
+<img src="./src/readmeImg/row1.png" height="204">
 
 - Sayfa sayısıni belirleyen input bölümüne geçersiz bir değer girerseniz uyarı alırsınız.
 
-<img src="./src/readmeImg/warn.png" height="55">
+<img src="./src/readmeImg/warn.png" height="205">
 
 - Sutün başlıklarına basarak gösterilen datayı o sutün verileri için alfabetik sıraya alabilirsiniz.
 
-<img src="./src/readmeImg/sorting.png" height="114">
+<img src="./src/readmeImg/sorting.png" height="204">
 
 ## Kullanılan Teknolojiler ve Bağımlılıklar
 
